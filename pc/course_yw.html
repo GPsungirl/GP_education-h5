@@ -1,0 +1,995 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta content="no-transform " http-equiv="Cache-Control" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <title>课程列表</title>
+  <meta content="企业培训视频,网络商学院,在线商学院,企业在线学习" name="keywords" />
+  <meta content="能力教育是专业的在线企业管理培训课程服务的网络商学院，为企业提供最齐全企业培训课程、有效的企业培训方案，企业管理培训课程均以在线企业培训视频方式提供。" name="description" />
+  <meta content="能力教育" name="author" />
+  <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="js/layer.min.js" type="text/javascript"></script>
+  <link type="text/css" rel="stylesheet" href="css/layer.css" id="skinlayercss" />
+  <script src="js/jquery.cookie.js" type="text/javascript"></script>
+
+
+  <script src="js/style.js" type="text/javascript"></script>
+  <script src="js/a.js" type="text/javascript"></script>
+  <!--选择栏目样式-->
+  <!--找课程页面添加----->
+  <link href="css/global_channel.css" type="text/css" rel="stylesheet" />
+  <link href="css/channel_course_list.css" type="text/css" rel="stylesheet" />
+  <script src="js/channel_course_list.js" type="text/javascript"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .global_feedback {
+      width: 530px;
+      display: none;
+      background: #fff;
+      z-index: 999;
+    }
+
+    .global_feedback table {
+      width: 530px;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .global_feedback .h_20 {
+      height: 20px;
+    }
+
+    .global_feedback table tr {
+      height: 50px;
+    }
+
+    .global_feedback .t_title {
+      height: 40px;
+    }
+
+    .global_feedback .tips {
+      height: 30px;
+      color: #ff0000;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .global_feedback .t_left {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .global_feedback .t_right {
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .global_feedback .t_right select {
+      height: 30px;
+    }
+
+    .global_feedback .t_right input,
+    .global_feedback textarea {
+      width: 310px;
+      border: 1px solid #dddddd;
+      padding: 10px;
+      height: 14px;
+      border-radius: 3px;
+    }
+
+    .global_feedback textarea {
+      line-height: 20px;
+      height: 116px;
+      margin-top: 10px;
+    }
+
+    .global_feedback .sub_btn {
+      background: #288ce6;
+      font-size: 20px;
+      color: #fff;
+      padding: 10px 32px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      margin: 20px;
+    }
+  </style>
+
+  <style type="text/css">
+    .WPA3-SELECT-PANEL {
+      z-index: 2147483647;
+      width: 463px;
+      height: 292px;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #d4d4d4;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 15px #d4d4d4;
+    }
+
+    .WPA3-SELECT-PANEL * {
+      position: static;
+      z-index: auto;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      width: auto;
+      height: auto;
+      max-height: auto;
+      max-width: auto;
+      min-height: 0;
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      clear: none;
+      clip: auto;
+      background: transparent;
+      color: #333;
+      cursor: auto;
+      direction: ltr;
+      filter: ;
+      float: none;
+      font: normal normal normal 12px "Helvetica Neue", Arial, sans-serif;
+      line-height: 16px;
+      letter-spacing: normal;
+      list-style: none;
+      marks: none;
+      overflow: visible;
+      page: auto;
+      quotes: none;
+      -o-set-link-source: none;
+      size: auto;
+      text-align: left;
+      text-decoration: none;
+      text-indent: 0;
+      text-overflow: clip;
+      text-shadow: none;
+      text-transform: none;
+      vertical-align: baseline;
+      visibility: visible;
+      white-space: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1;
+      -webkit-outline: 0;
+      -moz-outline: 0;
+      -ms-outline: 0;
+      -o-outline: 0;
+      outline: 0;
+      -webkit-text-size-adjust: none;
+      font-family: Microsoft YaHei, Simsun;
+    }
+
+    .WPA3-SELECT-PANEL a {
+      cursor: auto;
+    }
+
+    .WPA3-SELECT-PANEL .WPA3-SELECT-PANEL-TOP {
+      height: 25px;
+    }
+
+    .WPA3-SELECT-PANEL .WPA3-SELECT-PANEL-CLOSE {
+      float: right;
+      display: block;
+      width: 47px;
+      height: 25px;
+      background: url(images/panel.png);
+    }
+
+    .WPA3-CONFIRM * {
+      position: static;
+      z-index: auto;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      width: auto;
+      height: auto;
+      max-height: auto;
+      max-width: auto;
+      min-height: 0;
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      clear: none;
+      clip: auto;
+      background: transparent;
+      color: #333;
+      cursor: auto;
+      direction: ltr;
+      filter: ;
+      float: none;
+      font: normal normal normal 12px "Helvetica Neue", Arial, sans-serif;
+      line-height: 16px;
+      letter-spacing: normal;
+      list-style: none;
+      marks: none;
+      overflow: visible;
+      page: auto;
+      quotes: none;
+      -o-set-link-source: none;
+      size: auto;
+      text-align: left;
+      text-decoration: none;
+      text-indent: 0;
+      text-overflow: clip;
+      text-shadow: none;
+      text-transform: none;
+      vertical-align: baseline;
+      visibility: visible;
+      white-space: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1;
+      -webkit-outline: 0;
+      -moz-outline: 0;
+      -ms-outline: 0;
+      -o-outline: 0;
+      outline: 0;
+      -webkit-text-size-adjust: none;
+    }
+
+    .WPA3-CONFIRM * {
+      font-family: Microsoft YaHei, Simsun;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-TITLE {
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      line-height: 40px;
+      color: #2b6089;
+      font-weight: normal;
+      font-size: 14px;
+      text-indent: 80px;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-CONTENT {
+      height: 55px;
+      margin: 0;
+      line-height: 55px;
+      color: #353535;
+      font-size: 14px;
+      text-indent: 29px;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-PANEL {
+      height: 30px;
+      margin: 0;
+      padding-right: 16px;
+      text-align: right;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-BUTTON {
+      position: relative;
+      display: inline-block !important;
+      display: inline;
+      zoom: 1;
+      width: 99px;
+      height: 30px;
+      margin-left: 10px;
+      line-height: 30px;
+      color: #000;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-BUTTON-FOCUS {
+      width: 78px;
+    }
+
+    .WPA3-CONFIRM .WPA3-CONFIRM-BUTTON .WPA3-CONFIRM-BUTTON-TEXT {
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .WPA3-CONFIRM-CLOSE {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <!--头部开始-------------->
+  <!--CSS文件-->
+  <div style="height: 69px;" class="">
+    <!--sso头部开始------------------------>
+    <!--CSS文件-->
+    <link href="css/global.css" type="text/css" rel="stylesheet" />
+    <!--头部开始--------------------------->
+    <div id="YingShengSSOTopDIV" class="global_nav">
+      <div id="yS_tOp_LoGinbaR" class="box_1200">
+        <!-- 左侧logo -->
+        <div style="cursor: pointer;" class="top_logo"></div>
+        <!--搜索框-->
+        <div class="search">
+          <i class="iconfont close"></i>
+          <form target="_blank" action="search_course.html" method="get" name="search_js1" id="Form1">
+            <input type="text" name="kw" id="search_text" class="search_text" placeholder="搜索课程" autocomplete="off" />
+            <span onclick="$('#btnHidSubmit').click();" class="search_go"><i></i></span>
+            <input type="submit" style="border: 0px; background: none; width: 0px; height: 0px;" value=""
+              id="btnHidSubmit" />
+          </form>
+          <div style="display: none;" class="search_lick">
+            <dl>
+              <dd>
+                微营销
+              </dd>
+              <dd>
+                领导力
+              </dd>
+              <dd>
+                团队管理
+              </dd>
+              <dd>
+                Excel
+              </dd>
+              <dd>
+                面试技巧
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!--中部 菜单栏-->
+        <div class="nav_list">
+          <ul>
+            <li class="" id="ys_top_index"><a href="../index.html" title="能力教育">首页</a></li>
+            <li id="ys_top_performance"><a href="course_yy.html" title="岗位系统班">小学英语</a></li>
+            <li class="on" id="ys_top_afree"><a href="javascript:;" title="每日一课">小学语文</a></li>
+            <li id="ys_top_college"><a href="course_sx.html" title="找课程">小学数学</a></li>
+            <li id="ys_top_college"><a href="course_kx.html" title="找课程">小学科学</a></li>
+          </ul>
+        </div>
+        <!--隐藏字段-->
+        <div id="ys_top_Msg" style="display: none;"></div>
+        <div class="msg_div" style="display: none;"></div>
+        <div class="avatar" style="display: none;"></div>
+        <div class="vip" style="display: none;"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!--sso头部结束------------------------>
+  </div>
+  <!--JS文件-->
+  <script src="js/global.js" type="text/javascript"></script>
+  <!--CSS文件-->
+  <link href="css/global.css" type="text/css" rel="stylesheet" />
+  <!--头部结束-------------->
+  <!--中间内容开始-------------->
+  <!--中间内容-->
+  <div class="free_container">
+    <div class="free_main">
+      <!-- 顶部隐藏部分 -->
+      <div style="display: none;">
+        <!--** 路径 **-->
+        <div class="Current">
+          <span class="s1">当前位置：</span>
+          <span class="s1"><a href="/college/">所有课程</a>&nbsp;<font>&gt;</font></span>
+          <span class="s1">全部分类</span>
+        </div>
+        <!--** 分类菜单 **-->
+        <div class="category_v2">
+          <div class="clear"></div>
+          <div class="cat_main">
+            <span class="s1"><a id="all_cat" href="#">按分类</a></span>
+            <span><a id="all_gw" class="no" href="#">按岗位</a></span>
+          </div>
+          <ul class="ul_01">
+            <li><a href="/college/list-103-0-0-0">人力资源</a></li>
+            <li><a href="/college/list-101-0-0-0">财务管理</a></li>
+            <li><a href="/college/list-119-0-0-0">电子商务</a></li>
+            <li><a href="/college/list-106-0-0-0">总裁课堂</a></li>
+            <li><a href="/college/list-108-0-0-0">职业素质</a></li>
+            <li><a href="/college/list-110-0-0-0">市场营销</a></li>
+            <li><a href="/college/list-105-0-0-0">客户服务</a></li>
+            <li><a href="/college/list-107-0-0-0">采购物流</a></li>
+            <li><a href="/college/list-109-0-0-0">综合管理</a></li>
+            <li><a href="/college/list-102-0-0-0">生产管理</a></li>
+          </ul>
+          <ul class="ul_02">
+            <li><a class="now" id="01" href="#">基础岗位</a></li>
+            <li><a id="02" href="#">人力资源</a></li>
+            <li><a id="03" href="#">行政管理</a></li>
+            <li><a id="04" href="#">生产管理</a></li>
+            <li><a id="05" href="#">市场营销</a></li>
+            <li><a id="06" href="#">财务管理</a></li>
+            <li><a id="07" href="#">采购物流</a></li>
+            <li><a id="08" href="#">电子商务</a></li>
+          </ul>
+          <dl class="ul_03" id="dl_01">
+            <dd>
+              <a href="/college/list-0-1-0-0">董事长</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-4-0-0">总经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-5-0-0">总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-6-0-0">经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-7-0-0">主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-8-0-0">基层员工</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-130-0-0">副总经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-131-0-0">储备干部</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-175-0-0">职场新手</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-176-0-0">创业者</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_02">
+            <dd>
+              <a href="/college/list-0-12-0-0">人力资源经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-13-0-0">人力资源总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-14-0-0">培训师</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-15-0-0">培训经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-96-0-0">员工关系专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-97-0-0">薪资福利专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-98-0-0">招聘专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-103-0-0">绩效专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-104-0-0">人事专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-132-0-0">企业文化专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-133-0-0">人事助理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-134-0-0">培训专员</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_03">
+            <dd>
+              <a href="/college/list-0-9-0-0">行政总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-10-0-0">行政经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-11-0-0">行政助理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-129-0-0">总经理助理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-136-0-0">前台</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-137-0-0">董事长秘书</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-138-0-0">办公室文员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-139-0-0">办公室主任</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_04">
+            <dd>
+              <a href="/college/list-0-24-0-0">班组长</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-25-0-0">生产主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-26-0-0">生产总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-27-0-0">质量部经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-28-0-0">生产过程品管员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-29-0-0">车间主任</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-31-0-0">跟单员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-34-0-0">仓库主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-140-0-0">厂长</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-141-0-0">生产助理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-142-0-0">仓管员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-143-0-0">生产部经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-144-0-0">设备员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-145-0-0">设备主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-146-0-0">现场督导员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-147-0-0">物控经理</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_05">
+            <dd>
+              <a href="/college/list-0-16-0-0">营销总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-17-0-0">市场经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-18-0-0">销售经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-19-0-0">渠道经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-20-0-0">品牌经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-21-0-0">销售代表</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-22-0-0">客服专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-23-0-0">店长</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-30-0-0">外贸经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-127-0-0">项目经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-148-0-0">市场总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-149-0-0">门店运营总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-152-0-0">销售助理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-153-0-0">导购员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-154-0-0">客服经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-155-0-0">大客户经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-156-0-0">大客户总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-157-0-0">市场调查员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-158-0-0">电话营销员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-159-0-0">电话营销经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-160-0-0">外贸专员</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_06">
+            <dd>
+              <a href="/college/list-0-35-0-0">财务总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-36-0-0">财务经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-37-0-0">会计</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-38-0-0">出纳</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-161-0-0">会计主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-162-0-0">财务主管</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_07">
+            <dd>
+              <a href="/college/list-0-32-0-0">物流经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-33-0-0">采购经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-163-0-0">采购专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-164-0-0">物流专员</a>
+            </dd>
+          </dl>
+          <dl class="ul_03" id="dl_08">
+            <dd>
+              <a href="/college/list-0-39-0-0">网络营销专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-40-0-0">电子商务员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-81-0-0">网络运营总监</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-166-0-0">在线客服</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-167-0-0">电子商务经理</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-168-0-0">网络推广</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-169-0-0">网站编辑</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-170-0-0">网络运营专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-171-0-0">网站编辑主管</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-177-0-0">微信专员</a>
+            </dd>
+            <dd>
+              <a href="/college/list-0-178-0-0">淘宝店长</a>
+            </dd>
+          </dl>
+          <div class="clear"></div>
+        </div>
+        <!--H1,h2-->
+        <!--排序开始-->
+        <div class="orderby">
+          <dl>
+            <dd class="now" onclick="orderField('0','0','1','0');" id="sort_created">
+              最新更新
+            </dd>
+            <dd onclick="orderField('0','0','1','1');" id="sort_views">
+              浏览量
+            </dd>
+            <!--<dd id="sort_title" onclick="orderField('title');">标题</dd>-->
+            <dd onclick="orderField('0','0','1','2');" id="sort_recoLevel">
+              精品推荐
+            </dd>
+            <dd onclick="orderField('0','0','1','3');" id="sort_priceASC2">
+              价格
+            </dd>
+          </dl>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <!--排序结束-->
+      <!--** 列表 **-->
+      <div class="todayHot">
+        <ul class="glist">
+          <li> <a title="战略新兴产业的投资机遇（3集）" target="_blank" href="course_detail.html?1464.html"> <img
+                src="images/1464_353_279.jpg" alt="战略新兴产业的投资机遇（3集）" /> </a> <span class="today_tit"><a
+                title="战略新兴产业的投资机遇（3集）" target="_blank" href="course_detail.html?1464.html">战略新兴产业的投资机遇（3集）</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/101861">丁继红</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>28.8</em></span></span> </li>
+          <li> <a title="供给侧改革时政解读及市场导向（5集）" target="_blank" href="course_detail.html?1463.html"> <img
+                src="images/1463_353_279.jpg" alt="供给侧改革时政解读及市场导向（5集）" /> </a> <span class="today_tit"><a
+                title="供给侧改革时政解读及市场导向（5集）" target="_blank"
+                href="course_detail.html?1463.html">供给侧改革时政解读及市场导向（5集）</a></span> <span class="qg_teach">讲师：<a
+                target="_blank" href="http://zone.yingsheng.com/101627">汤敏</a></span> <span class="price"><span
+                class="pri_normal pri_dispay">￥<em>48.0</em></span></span> </li>
+          <li> <a title="SEM网络营销全攻略（22集）" target="_blank" href="course_detail.html?1461.html"> <img class="today_small"
+                src="images/class_small.png" alt="系统班" /> <img src="images/1461_353_279.jpg" alt="SEM网络营销全攻略（22集）" />
+            </a> <span class="today_tit"><a title="SEM网络营销全攻略（22集）" target="_blank"
+                href="course_detail.html?1461.html">SEM网络营销全攻略（22集）</a></span> <span class="qg_teach">讲师：<a
+                target="_blank" href="http://zone.yingsheng.com/99257">臧承云</a></span> <span class="price"><span
+                class="pri_free pri_dispay">免费</span></span> </li>
+          <li> <a title="创意文案进阶（8集）" target="_blank" href="course_detail.html?1460.html"> <img class="today_small"
+                src="images/class_small.png" alt="系统班" /> <img src="images/1460_353_279.jpg" alt="创意文案进阶（8集）" /> </a>
+            <span class="today_tit"><a title="创意文案进阶（8集）" target="_blank"
+                href="course_detail.html?1460.html">创意文案进阶（8集）</a></span> <span class="qg_teach">讲师：<a target="_blank"
+                href="http://zone.yingsheng.com/100569">姚泽云</a></span> <span class="price"><span
+                class="pri_normal pri_dispay">￥<em>34.8</em></span></span> </li>
+          <li> <a title="竞品分析实战攻略（6集）" target="_blank" href="course_detail.html?1459.html"> <img class="today_small"
+                src="images/class_small.png" alt="系统班" /> <img src="images/1459_353_279.jpg" alt="竞品分析实战攻略（6集）" /> </a>
+            <span class="today_tit"><a title="竞品分析实战攻略（6集）" target="_blank"
+                href="course_detail.html?1459.html">竞品分析实战攻略（6集）</a></span> <span class="qg_teach">讲师：<a target="_blank"
+                href="http://zone.yingsheng.com/99256">方若</a></span> <span class="price"><span
+                class="pri_free pri_dispay">免费</span></span> </li>
+          <li> <a title="SEO基础课程——读懂搜索引擎工作原理（5集）" target="_blank" href="course_detail.html?1458.html"> <img
+                src="images/1458_353_279.jpg" alt="SEO基础课程——读懂搜索引擎工作原理（5集）" /> </a> <span class="today_tit"><a
+                title="SEO基础课程——读懂搜索引擎工作原理（5集）" target="_blank"
+                href="course_detail.html?1458.html">SEO基础课程——读懂搜索引擎工作原理（5集）</a></span> <span class="qg_teach">讲师：<a
+                target="_blank" href="http://zone.yingsheng.com/100084">张渤泓</a></span> <span class="price"><span
+                class="pri_normal pri_dispay">￥<em>24.8</em></span></span> </li>
+          <li> <a title="从0开始，讲透内容运营（5集）" target="_blank" href="course_detail.html?1457.html"> <img
+                src="images/1457_353_279.jpg" alt="从0开始，讲透内容运营（5集）" /> </a> <span class="today_tit"><a
+                title="从0开始，讲透内容运营（5集）" target="_blank" href="course_detail.html?1457.html">从0开始，讲透内容运营（5集）</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/100082">陈维贤</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>28.8</em></span></span> </li>
+          <li> <a title="如何用非暴力沟通解决沟通难题" target="_blank" href="course_detail.html?1455.html"> <img
+                src="images/1455_353_279.jpg" alt="如何用非暴力沟通解决沟通难题" /> </a> <span class="today_tit"><a
+                title="如何用非暴力沟通解决沟通难题" target="_blank" href="course_detail.html?1455.html">如何用非暴力沟通解决沟通难题</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/89551">王锴</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>9.9</em></span></span> </li>
+          <li> <a title="理财界的新精英：对冲基金（4集）" target="_blank" href="course_detail.html?1454.html"> <img
+                src="images/1454_353_279.jpg" alt="理财界的新精英：对冲基金（4集）" /> </a> <span class="today_tit"><a
+                title="理财界的新精英：对冲基金（4集）" target="_blank" href="course_detail.html?1454.html">理财界的新精英：对冲基金（4集）</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/93605">龚扬锋</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>38.0</em></span></span> </li>
+          <li> <a title="互联网+新招商模式（4集）" target="_blank" href="course_detail.html?1453.html"> <img
+                src="images/1453_353_279.jpg" alt="互联网+新招商模式（4集）" /> </a> <span class="today_tit"><a
+                title="互联网+新招商模式（4集）" target="_blank" href="course_detail.html?1453.html">互联网+新招商模式（4集）</a></span> <span
+              class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/99179">孙博伍</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>58.0</em></span></span> </li>
+          <li> <a title="信托：保本才是硬道理（4集）" target="_blank" href="course_detail.html?1452.html"> <img
+                src="images/1452_353_279.jpg" alt="信托：保本才是硬道理（4集）" /> </a> <span class="today_tit"><a
+                title="信托：保本才是硬道理（4集）" target="_blank" href="course_detail.html?1452.html">信托：保本才是硬道理（4集）</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/93605">龚扬锋</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>32.8</em></span></span> </li>
+          <li> <a title="用众筹实现创业梦（7集）" target="_blank" href="course_detail.html?1451.html"> <img class="today_small"
+                src="images/class_small.png" alt="系统班" /> <img src="images/1451_353_279.jpg" alt="用众筹实现创业梦（7集）" /> </a>
+            <span class="today_tit"><a title="用众筹实现创业梦（7集）" target="_blank"
+                href="course_detail.html?1451.html">用众筹实现创业梦（7集）</a></span> <span class="qg_teach">讲师：<a target="_blank"
+                href="http://zone.yingsheng.com/97148">牛建涛</a></span> <span class="price"><span
+                class="pri_normal pri_dispay">￥<em>43.8</em></span></span> </li>
+        </ul>
+      </div>
+      <div style="margin: auto; text-align: center; margin-top: 30px; margin-bottom: 20px; height: 30px;">
+        <div class="page">
+          <span>上一页</span>
+          <span class="current_page">1</span>
+          <a href="/college/list-0-0-2-0">2</a>
+          <a href="/college/list-0-0-3-0">3</a>
+          <a href="/college/list-0-0-4-0">4</a>
+          <a href="/college/list-0-0-5-0">5</a>
+          <a href="/college/list-0-0-6-0">...</a>
+          <a href="/college/list-0-0-74-0">74</a>
+          <a href="/college/list-0-0-2-0">下一页</a>
+        </div>
+      </div>
+      <h2 class="free_subtitle"><span></span>大家都在看</h2>
+      <div class="todayHot">
+        <ul class="glist">
+          <li> <a title="我的职业生涯我做主（2集）" target="_blank" href="course_detail.html?592.html"> <img
+                src="images/592_353_279.jpg" alt="我的职业生涯我做主（2集）" /> </a> <span class="today_tit"><a
+                title="我的职业生涯我做主（2集）" target="_blank" href="course_detail.html?592.html">我的职业生涯我做主（2集）</a></span> <span
+              class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/41544">郑博远</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>38.8</em></span></span> </li>
+          <li> <a title="如何快速提升职场讲话魅力（2集）" target="_blank" href="course_detail.html?744.html"> <img
+                src="images/744_353_279.jpg" alt="如何快速提升职场讲话魅力（2集）" /> </a> <span class="today_tit"><a
+                title="如何快速提升职场讲话魅力（2集）" target="_blank" href="course_detail.html?744.html">如何快速提升职场讲话魅力（2集）</a></span>
+            <span class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/57145">殷亚敏</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>38.0</em></span></span> </li>
+          <li> <a title="如何搞定你的上司" target="_blank" href="course_detail.html?1160.html"> <img
+                src="images/1160_353_279.jpg" alt="如何搞定你的上司" /> </a> <span class="today_tit"><a title="如何搞定你的上司"
+                target="_blank" href="course_detail.html?1160.html">如何搞定你的上司</a></span> <span class="qg_teach">讲师：<a
+                target="_blank" href="http://zone.yingsheng.com/41370">胡翠艳</a></span> <span class="price"><span
+                class="pri_normal pri_dispay">￥<em>19.8</em></span></span> </li>
+          <li> <a title="不同场合的着装攻略（4集）" target="_blank" href="course_detail.html?1204.html"> <img
+                src="images/1204_353_279.jpg" alt="不同场合的着装攻略（4集）" /> </a> <span class="today_tit"><a
+                title="不同场合的着装攻略（4集）" target="_blank" href="course_detail.html?1204.html">不同场合的着装攻略（4集）</a></span> <span
+              class="qg_teach">讲师：<a target="_blank" href="http://zone.yingsheng.com/56755">王雅波</a></span> <span
+              class="price"><span class="pri_normal pri_dispay">￥<em>26.8</em></span></span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--中间内容结束-->
+  <!--课程曝光率-->
+  <script
+    src="http://api.yingsheng.com/LogManager.ashx?op=CourseDisplayLog&amp;app_id=100001&amp;sign=15fccab98144faafb3de5c25c217b985&amp;sessionid=vlkr30v1fkqs55ooni2jrist&amp;userid=0&amp;username=&amp;display_url=http%3a%2f%2fwww.yingsheng.com%2froute.ashx%3fact%3dCourse-Course-list&amp;courseid=1464,1463,1461,1460,1459,1458,1457,1455,1454,1453,1452,1451,592,744,1160,1204,"
+    type="text/javascript"></script>
+  <!--中间内容结束-------------->
+  <!--跟随广告-->
+  <script src="js/index_scroll_ad.js" type="text/javascript"></script>
+  <!--底部开始-------------->
+  <div class="clear"></div>
+  <!--右边悬浮-->
+  <div class="fd_float" style="display: none;">
+    <div class="fd_box">
+      <a target="_blank" href="http://www.yingsheng.com/app" class="fd_a fd_app" title="英盛APP下载" rel="nofollow"><span
+          class="fd_ck"><span class="fk_ckcont"> <img alt="英盛APP下载" src="images/code.png" /></span></span></a>
+
+      <a href="http://order.yingsheng.com/Order?source=1" class="fd_car" target="_blank" title="购物车" rel="nofollow"></a>
+      <script src="js/feedback.js" type="text/javascript"></script>
+      <a href="javascript:;" class="fd_feedback" title="反馈" id="fd_feedback" rel="nofollow"></a>
+      <a id="J_Feedback" href="javascript:;" class="fd_a fd_totop" title="返回页首" rel="nofollow"></a>
+    </div>
+  </div>
+  <!--底部footer-->
+  <div class="footer">
+    <div class="certification">
+      <br /> 版权所有：青岛能力教育有限公司
+      <br /> 网站备案号：粤ICP备05022448 经营许可证：粤B2-20130302
+    </div>
+
+  </div>
+  <div class="clear"></div>
+
+  <script src="js/lanmu.js"></script>
+  <script type="text/javascript" src="js/style_new.js"></script>
+  <div class="plase_goto" style="display:none;" id="fix">
+    <img style="cursor:pointer;" src="images/fix.jpg" />
+    <a href="http://www.yingsheng.com/hot-fenqing.html" class="a1"></a>
+    <a href="javascript:TempHD_UserUnShow()" class="a2"></a>
+  </div>
+
+
+  <script type="text/javascript">
+
+
+    $(document).ready(function () {
+      //修改客服QQ
+      try {
+        $.ajax({
+          type: "get",
+          async: true,	//false时执行完再继续执行
+          url: "http://www.yingsheng.com/ext-ajax-qq.htm",
+          data: {},
+          dataType: "jsonp",
+          callback: "callback",
+          success: function (data) {
+            if (data.result == '1') {
+              $(".serviceqq").attr("href", data.qq);
+            }
+            else {
+            }
+          }, error: function () { return false; }
+        });
+      } catch (e) { }
+
+      //显示底部广告
+      if ($.cookie('isShowGlobal_ad_bottom_div') != null) {
+        $("#global_ad_bottom_div").hide();
+        $(".global_kefu").css("bottom", "0");
+        $("body").css("padding-bottom", "0");
+
+      }
+    })
+
+    function global_ad_bottomClose() {
+      //var r=confirm("是否不再显示？")
+      //if (r==true)
+      //{
+      //    //$.cookie("isShowGlobal_ad_bottom_div", "yes");
+      //    closeBottomAd();
+      //}
+
+      closeBottomAd();
+      $("#global_ad_bottom_div").hide(500);
+      $(".global_kefu").css("bottom", "0");
+      $("body").css("padding-bottom", "0");
+    }
+
+    function closeBottomAd() {
+      var date1 = new Date();
+      date1.setHours(23, 59, 59, 59);
+      $.cookie('isShowGlobal_ad_bottom_div', 'true', { expires: date1, domain: '.yingsheng.com' });
+    }
+
+  </script>
+  <!--底部结束-------------->
+  <div class="global_feedback" id="ys_global_feedbackBox">
+    <table>
+      <tbody>
+        <tr class="h_20">
+          <td colspan="2"></td>
+        </tr>
+        <tr class="t_title">
+          <td colspan="2">用户反馈</td>
+        </tr>
+        <tr>
+          <td width="130px" class="t_left">分类：</td>
+          <td width="*" class="t_right"><select id="fq_text_cate"></select></td>
+        </tr>
+        <tr>
+          <td class="t_left">标题：</td>
+          <td class="t_right"><input type="text" id="fq_text_title" /></td>
+        </tr>
+        <tr>
+          <td class="t_left">联系人：</td>
+          <td class="t_right"><input type="text" id="fq_text_linkname" /></td>
+        </tr>
+        <tr>
+          <td class="t_left">联系邮箱：</td>
+          <td class="t_right"><input type="text" id="fq_text_email" /></td>
+        </tr>
+        <tr>
+          <td class="t_left">手机号码：</td>
+          <td class="t_right"><input type="text" id="fq_text_tel" /></td>
+        </tr>
+        <tr>
+          <td class="t_left">联系QQ：</td>
+          <td class="t_right"><input type="text" id="fq_text_qq" /></td>
+        </tr>
+        <tr>
+          <td class="t_left">反馈内容：</td>
+          <td class="t_right"><textarea id="fq_text_context"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="button" value="提交" class="sub_btn" id="sub_feedback" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+
+</html>

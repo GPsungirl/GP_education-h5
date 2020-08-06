@@ -1,0 +1,22 @@
+
+/* 导航栏的右侧 搜索框 */
+.search{
+    display: none;
+}
+
+
+/* 教育课程 */
+.course_list{
+    padding:50px;
+}
+.course_list dd{
+    padding: 2px 0 1px 20px;
+    cursor: pointer;
+}
+
+.course_list dd:hover span,
+.course_list dd.active span{
+    color: lightcoral;
+}
+
+
